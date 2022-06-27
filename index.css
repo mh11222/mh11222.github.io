@@ -1,0 +1,117 @@
+/* Bold weight; Normal style */
+@font-face {
+    font-family: 'Nobel';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./assets/Nobel-Bold.otf') format('woff');
+}
+/* Normal weight; Normal style */
+@font-face {
+    font-family: 'Nobel';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./assets/Nobel-Regular.ttf') format('woff');
+}
+
+body {
+    background-color: rgba(251, 179, 51, 1);
+}
+.main_container {
+	display: none;
+}
+
+.menu{
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    max-width: 260px;
+    padding: 30px;
+    padding-right: 0px;
+    font-family: "Nobel";
+}
+
+.menu-item {
+    display: block;
+	max-width: 100px;
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Nobel";
+    font-weight: bold;
+}
+
+.menu-item:hover {
+	text-decoration: underline;
+}
+
+.check {
+	display: none;
+}
+
+.content {
+	font-size: 16px;
+}
+
+.menu a {
+	color: black;
+}
+
+#menu-content-about {
+	display: none;
+}
+
+#menu-content-contact {
+	display: none;
+}
+
+#about-btn:checked ~ #menu-content-about {
+	display: block;
+}
+
+#contact-btn:checked ~ #menu-content-contact {
+	display: block;
+}
+
+.video {
+	position: fixed;
+    z-index: -1;
+    top: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.video video {
+	height: 90%;
+}
+
+.video img {
+	display: none;
+    height: 50%;
+}
+
+
+@media (max-width: 800px) {
+    .menu{
+		width: 500px;
+	}
+   .video video {
+		display: none;
+	}
+  .video img {
+		display: block;
+	}
+}
+
+@media (max-width: 800px) and (max-height: 1250px) {
+	.video{
+		margin-top: 25px;
+	}
+    .video img {
+		height: unset;
+        width: 90%;
+	}
+}
